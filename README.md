@@ -8,6 +8,8 @@ Inertia allows you to build modern, single-page React applications using classic
 
 This React starter kit utilizes React 19, **JavaScript/JSX**, Tailwind, and the [shadcn/ui](https://ui.shadcn.com) and [radix-ui](https://www.radix-ui.com) component libraries.
 
+> **Note:** This template is automatically generated from [aliziodev/react-jsx-starter-kit-dev](https://github.com/aliziodev/react-jsx-starter-kit-dev) based on the original Laravel React starter kit repository. The conversion process transforms TypeScript files to JavaScript/JSX for broader accessibility.
+
 ## Usage
 
 ```bash
