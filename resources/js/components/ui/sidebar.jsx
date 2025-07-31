@@ -1,4 +1,4 @@
-import *"react";
+import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import { PanelLeftIcon } from "lucide-react";
@@ -10,7 +10,6 @@ import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from "@/components/ui/tooltip";
-
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_WIDTH = "16rem";
@@ -93,8 +92,8 @@ function Sidebar({ side = "left", variant = "sidebar", collapsible = "offcanvas"
     if (isMobile) {
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
         <SheetHeader className="sr-only">
-          Sidebar</SheetTitle>
-          Displays the mobile sidebar.</SheetDescription>
+          <SheetTitle>Sidebar</SheetTitle>
+          <SheetDescription>Displays the mobile sidebar.</SheetDescription>
         </SheetHeader>
         <SheetContent data-sidebar="sidebar" data-slot="sidebar" data-mobile="true" className="bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden" style={{
                 "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
@@ -204,7 +203,8 @@ function SidebarMenuButton({ asChild = false, isActive = false, variant = "defau
             children: tooltip,
         };
     }
-    return ({button}</TooltipTrigger>
+    return (<Tooltip>
+      <TooltipTrigger asChild>{button}</TooltipTrigger>
       <TooltipContent side="right" align="center" hidden={state !== "collapsed" || isMobile} {...tooltip}/>
     </Tooltip>);
 }

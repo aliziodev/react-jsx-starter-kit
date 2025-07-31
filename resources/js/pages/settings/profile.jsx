@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AppLayout from '@/layouts/app-layout';
 import SettingsLayout from '@/layouts/settings/layout';
-
 const breadcrumbs = [
     {
         title: 'Profile settings',
@@ -30,7 +29,7 @@ export default function Profile({ mustVerifyEmail, status }) {
     return (<AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Profile settings"/>
 
-            
+            <SettingsLayout>
                 <div className="space-y-6">
                     <HeadingSmall title="Profile information" description="Update your name and email address"/>
 

@@ -1,5 +1,4 @@
 import { useCallback } from 'react';
-
 export function useMobileNavigation() {
     return useCallback(() => {
         // Remove pointer-events style from body...

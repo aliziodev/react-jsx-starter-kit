@@ -6,7 +6,6 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import HeadingSmall from '@/components/heading-small';
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-
 export default function DeleteUser() {
     const passwordInput = useRef(null);
     const { data, setData, delete: destroy, processing, reset, errors, clearErrors } = useForm({ password: '' });
@@ -31,11 +30,13 @@ export default function DeleteUser() {
                     <p className="text-sm">Please proceed with caution, this cannot be undone.</p>
                 </div>
 
-                
+                <Dialog>
+                    <DialogTrigger asChild>
                         <Button variant="destructive">Delete account</Button>
                     </DialogTrigger>
-                    Are you sure you want to delete your account?</DialogTitle>
-                        
+                    <DialogContent>
+                        <DialogTitle>Are you sure you want to delete your account?</DialogTitle>
+                        <DialogDescription>
                             Once your account is deleted, all of its resources and data will also be permanently deleted. Please enter your password
                             to confirm you would like to permanently delete your account.
                         </DialogDescription>
@@ -51,7 +52,7 @@ export default function DeleteUser() {
                             </div>
 
                             <DialogFooter className="gap-2">
-                                
+                                <DialogClose asChild>
                                     <Button variant="secondary" onClick={closeModal}>
                                         Cancel
                                     </Button>

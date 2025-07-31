@@ -1,4 +1,4 @@
-export function Icon({ iconNode, className }) {
+export function Icon({ iconNode: IconComponent, className }) {
     if (!IconComponent) {
         return null;
     }

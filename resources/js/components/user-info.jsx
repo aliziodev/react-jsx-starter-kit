@@ -1,6 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useInitials } from '@/hooks/use-initials';
-
 export function UserInfo({ user, showEmail = false }) {
     const getInitials = useInitials();
     return (<>

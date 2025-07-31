@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useState } from 'react';
-
 const prefersDark = () => {
     if (typeof window === 'undefined') {
         return false;

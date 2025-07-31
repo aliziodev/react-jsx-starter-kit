@@ -8,7 +8,6 @@ import HeadingSmall from '@/components/heading-small';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-
 const breadcrumbs = [
     {
         title: 'Password settings',
@@ -43,7 +42,7 @@ export default function Password() {
     return (<AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Password settings"/>
 
-            
+            <SettingsLayout>
                 <div className="space-y-6">
                     <HeadingSmall title="Update password" description="Ensure your account is using a long, random password to stay secure"/>
 

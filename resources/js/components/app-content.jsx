@@ -1,6 +1,5 @@
 import { SidebarInset } from '@/components/ui/sidebar';
-import *'react';
-
+import * as React from 'react';
 export function AppContent({ variant = 'header', children, ...props }) {
     if (variant === 'sidebar') {
         return <SidebarInset {...props}>{children}</SidebarInset>;
