@@ -3,7 +3,6 @@ import { useInitials } from '@/hooks/use-initials';
 
 export function UserInfo({ user, showEmail = false }) {
     const getInitials = useInitials();
-
     return (<>
             <Avatar className="h-8 w-8 overflow-hidden rounded-full">
                 <AvatarImage src={user.avatar} alt={user.name}/>

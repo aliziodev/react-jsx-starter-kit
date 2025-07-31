@@ -2,7 +2,6 @@ import { useId } from 'react';
 
 export function PlaceholderPattern({ className }) {
     const patternId = useId();
-
     return (<svg className={className} fill="none">
             <defs>
                 <pattern id={patternId} x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">

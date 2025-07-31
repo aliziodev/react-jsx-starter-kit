@@ -2,7 +2,6 @@ import { Head, Link, usePage } from '@inertiajs/react';
 
 export default function Welcome() {
     const { auth } = usePage().props;
-
     return (<>
             <Head title="Welcome">
                 <link rel="preconnect" href="https://fonts.bunny.net"/>

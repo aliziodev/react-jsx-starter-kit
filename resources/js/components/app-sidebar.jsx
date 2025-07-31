@@ -10,29 +10,24 @@ const mainNavItems = [
     {
         title: 'Dashboard',
         href: '/dashboard',
-        icon: LayoutGrid,
+        icon,
     },
 ];
-
 const footerNavItems = [
     {
         title: 'Repository',
         href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
+        icon,
     },
     {
         title: 'Documentation',
         href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
+        icon,
     },
 ];
-
 export function AppSidebar() {
-
     return (<Sidebar collapsible="icon" variant="inset">
-            <SidebarHeader>
-                <SidebarMenu>
-                    <SidebarMenuItem>
+            
                         <SidebarMenuButton size="lg" asChild>
                             <Link href="/dashboard" prefetch>
                                 <AppLogo />
@@ -41,10 +36,12 @@ export function AppSidebar() {
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarHeader>
-            <SidebarContent>
+
+            
                 <NavMain items={mainNavItems}/>
             </SidebarContent>
-            <SidebarFooter>
+
+            
                 <NavFooter items={footerNavItems} className="mt-auto"/>
                 <NavUser />
             </SidebarFooter>

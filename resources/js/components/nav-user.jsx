@@ -9,13 +9,8 @@ import { ChevronsUpDown } from 'lucide-react';
 export function NavUser() {
     const { auth } = usePage().props;
     const { state } = useSidebar();
-
     const isMobile = useIsMobile();
-
-    return (<SidebarMenu>
-            <SidebarMenuItem>
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+    return (
                         <SidebarMenuButton size="lg" className="group text-sidebar-accent-foreground data-[state=open]:bg-sidebar-accent">
                             <UserInfo user={auth.user}/>
                             <ChevronsUpDown className="ml-auto size-4"/>

@@ -3,10 +3,9 @@ import { Link, usePage } from '@inertiajs/react';
 
 export function NavMain({ items = [] }) {
     const page = usePage();
-
     return (<SidebarGroup className="px-2 py-0">
-            <SidebarGroupLabel>Platform</SidebarGroupLabel>
-            <SidebarMenu>
+            Platform</SidebarGroupLabel>
+            
                 {items.map((item) => (<SidebarMenuItem key={item.title}>
                         <SidebarMenuButton asChild isActive={page.url.startsWith(item.href)} tooltip={{ children: item.title }}>
                             <Link href={item.href} prefetch>

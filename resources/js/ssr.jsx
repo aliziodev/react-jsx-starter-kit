@@ -5,12 +5,11 @@ import ReactDOMServer from 'react-dom/server';
 import { route } from 'ziggy-js';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
-
 createServer((page) => createInertiaApp({
     page,
     render: ReactDOMServer.renderToString,
     title: (title) => title ? `${title} - ${appName}` : appName,
-    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, import.meta.glob('./pages/**/*.tsx')),
+    resolve: (name) => resolvePageComponent(`./pages/${name}.jsx`, import.meta.glob('./pages/**/*.jsx')),
     setup: ({ App, props }) => {
         /* eslint-disable */
         // @ts-expect-error
@@ -20,9 +19,7 @@ createServer((page) => createInertiaApp({
             // @ts-expect-error
             location: new URL(page.props.ziggy.location),
         });
-
         /* eslint-enable */
-
         return <App {...props}/>;
     },
 }));
