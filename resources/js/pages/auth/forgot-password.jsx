@@ -21,7 +21,7 @@ export default function ForgotPassword({ status }) {
             {status && <div className="mb-4 text-center text-sm font-medium text-green-600">{status}</div>}
 
             <div className="space-y-6">
-                <form onSubmit={submit}>
+                <form method="POST" onSubmit={submit}>
                     <div className="grid gap-2">
                         <Label htmlFor="email">Email address</Label>
                         <Input id="email" type="email" name="email" autoComplete="off" value={data.email} autoFocus onChange={(e) => setData('email', e.target.value)} placeholder="email@example.com"/>
