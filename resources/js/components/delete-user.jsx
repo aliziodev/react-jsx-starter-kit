@@ -29,7 +29,7 @@ export default function DeleteUser() {
 
                         <Form method="delete" action={route('profile.destroy')} options={{
             preserveScroll: true,
-        }} onError={() => passwordInput.current?.focus()} onSubmitComplete={(form) => form.reset()} className="space-y-6">
+        }} onError={() => passwordInput.current?.focus()} resetOnSuccess className="space-y-6">
                             {({ resetAndClearErrors, processing, errors }) => (<>
                                     <div className="grid gap-2">
                                         <Label htmlFor="password" className="sr-only">

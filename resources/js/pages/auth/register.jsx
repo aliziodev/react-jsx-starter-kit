@@ -9,7 +9,7 @@ import AuthLayout from '@/layouts/auth-layout';
 export default function Register() {
     return (<AuthLayout title="Create an account" description="Enter your details below to create your account">
             <Head title="Register"/>
-            <Form method="post" action={route('register')} onSubmitComplete={(form) => form.reset('password', 'password_confirmation')} disableWhileProcessing className="flex flex-col gap-6">
+            <Form method="post" action={route('register')} resetOnSuccess={['password', 'password_confirmation']} disableWhileProcessing className="flex flex-col gap-6">
                 {({ processing, errors }) => (<>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
