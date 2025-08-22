@@ -15,6 +15,7 @@ const setCookie = (name, value, days = 365) => {
 const applyTheme = (appearance) => {
     const isDark = appearance === 'dark' || (appearance === 'system' && prefersDark());
     document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
 };
 const mediaQuery = () => {
     if (typeof window === 'undefined') {

@@ -36,6 +36,7 @@ export default function SettingsLayout({ children }) {
                 'bg-muted': currentPath === item.href,
             })}>
                                 <Link href={item.href} prefetch>
+                                    {item.icon && <item.icon className="h-4 w-4"/>}
                                     {item.title}
                                 </Link>
                             </Button>))}
